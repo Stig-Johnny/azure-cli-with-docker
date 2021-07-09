@@ -28,6 +28,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ghcr.io/stig-johnny/azure-cli-with-docker:latest
           labels: |
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
